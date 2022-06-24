@@ -15,3 +15,23 @@ export const useCoronaVirusData = () => useQuery(
         initialDataUpdatedAt: 1608412420052
     }
 )
+
+export const useForzaImage = () => useQuery(
+    'forza',
+    api.getForzaCarImage,
+    {
+        staleTime: 1000 * 60 * 3,
+        initialData: { image: '' },
+        initialDataUpdatedAt: 1608412420052
+    }
+)
+
+export const useFoodImage = () => useQuery(
+    'food',
+    api.getRandomFoodImage,
+    {
+        staleTime: 1000 * 60 * 3,
+        initialData: { image: '' },
+        initialDataUpdatedAt: 1608412420052
+    }
+)

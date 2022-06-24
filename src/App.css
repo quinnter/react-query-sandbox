@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.content {
+  display: flex;
+  gap: 10px;
+  /* flex-direction: column; */
+}
+
+.outlined-div {
+  border: 1px solid #282c34;
+  padding: 10px;
+}

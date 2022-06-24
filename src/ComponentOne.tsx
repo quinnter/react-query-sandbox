@@ -1,11 +1,16 @@
 import React from 'react'
-import { useCoronaVirusData } from './queries';
+import './App.css';
+import { useFoodImage } from './queries';
 
 
 export default function ComponentOne() {
-  const { data } = useCoronaVirusData()
+  const food = useFoodImage()
 
   return (
-    <div>{data.cache.expiresTimestamp}</div>
+    <div className='outlined-div'>
+      <h1>Component One</h1>
+      {/* <h3>Component One Expires At {data.cache.expiresTimestamp}</h3> */}
+      <img src={food.data.image} width={200}></img>
+    </div>
   )
 }

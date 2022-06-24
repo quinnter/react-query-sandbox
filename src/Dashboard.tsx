@@ -1,17 +1,16 @@
 import React from 'react'
-import { useQueryClient, useQuery } from "react-query";
-import * as api from './api'
+import { useCoronaVirusData } from './queries';
 
-type Props = {}
+
+type Props = {
+    
+}
 
 export default function Dashboard({}: Props) {
-   // Access the client
-   const queryClient = useQueryClient()
- 
-   // Queries
-   const query = useQuery('coronaVirusData', api.getCoronaVirusData, { staleTime: 300000 })
+
+   const { data } = useCoronaVirusData()
 
   return (
-    <div>Hey hey </div>
+    <div>{data.cache.expiresTimestamp}</div>
   )
 }

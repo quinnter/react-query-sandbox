@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <QueryClientProvider client={queryClient}>
         <Dashboard/>
-        <ReactQueryDevtools initialIsOpen={false}/>
+        <ReactQueryDevtools initialIsOpen={true}/>
       </QueryClientProvider>
     </div>
   );

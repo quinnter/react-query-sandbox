@@ -10,6 +10,12 @@ const queryClient = new QueryClient();
 
 function App() {
 
+  // To continue to research: Best stale time + cache time combo. 
+  // Whats the best way of combining with other hooks? 
+
+  // If a component is stale, it only refetches data if you re-focus on the window, 
+  // is there a way to get it to refresh automatically when the page is in focus?
+
   return (
     <div className="App">
       <QueryClientProvider client={queryClient}>

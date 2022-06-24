@@ -12,7 +12,7 @@ export default function ComponentThree({}: Props) {
         <div className='outlined-div'>
             <h1>Component Three</h1>
             <img src={forza.data.image} width={200}></img>
-            <img src={food.data.image} width={200}></img>
+            {food.isLoading ? <h4>I'm loading food</h4> : <img src={food.data.image} width={200}></img>}
             {food.isStale && <h4>I'm stale food</h4>}
         </div>
     )

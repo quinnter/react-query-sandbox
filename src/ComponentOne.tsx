@@ -9,8 +9,10 @@ export default function ComponentOne() {
   return (
     <div className='outlined-div'>
       <h1>Component One</h1>
-      {/* <h3>Component One Expires At {data.cache.expiresTimestamp}</h3> */}
-      <img src={food.data.image} width={200}></img>
+      {/* Instead of setting up initialData we can check if the component is loading */}
+      {/* If it is, we'll display a loading component */}
+      {food.isLoading ? <h4>I'm loading food</h4> : <img src={food.data.image} width={200}></img>}
+      {food.isStale && <h4>I'm stale food but different</h4>}
     </div>
   )
 }
